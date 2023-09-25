@@ -1,0 +1,4 @@
+export const VALIDATION = {
+  MIN_PASSWORD: 6,
+  MAX_PASSWORD: 40
+}
