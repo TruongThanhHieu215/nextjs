@@ -1,9 +1,9 @@
-import moment from "moment"
+import dayjs from "dayjs"
 
 export const convertDateTimeToString = (dateTime: number) => {
-  return moment(dateTime).format("YYYY.MM.DD")
+  return dayjs(dateTime).format("YYYY.MM.DD")
 }
 
 export const convertTimestampToDateTimeFormat = (timestamp: number, format = "YYYY.MM.DD") => {
-  return moment(timestamp).format(format)
+  return dayjs(timestamp).format(format)
 }
