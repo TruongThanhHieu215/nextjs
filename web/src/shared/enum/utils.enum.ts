@@ -5,7 +5,7 @@ export enum Utils {
   OK = "UTILS.OK",
   CLOSE = "UTILS.CLOSE",
   SAVE = "UTILS.SAVE",
-  NOTICE_FROM_PAGE = "ページからの通知"
+  NOTICE_FROM_PAGE = "ページからの通知",
 }
 
 export enum VALIDATION {
@@ -16,12 +16,12 @@ export enum VALIDATION {
   MIN_CVV = 3,
   MAX_YEAR = 2,
   MAX_MONTH = 2,
-  NUMBER_SPACE = 4
+  NUMBER_SPACE = 4,
 }
 
 export enum WINDOWN_SIZE {
   LANDSCAPE = 1024,
-  PHONE = 768
+  PHONE = 768,
 }
 
 export enum TYPE_BUTTON {
@@ -30,40 +30,40 @@ export enum TYPE_BUTTON {
   SECCOND = 3,
   CHECKBOX = 4,
   THIRT = 5,
-  YELLOW = 6
+  YELLOW = 6,
 }
 
 export enum TYPE_CHECKBOX {
   DEFAULT = 1,
   BUTTON = 2,
-  SWITCH = 3
+  SWITCH = 3,
 }
 
 export enum TYPE_INPUT {
   TEXT = "text",
-  RADIO = "radio"
+  RADIO = "radio",
 }
 
 export enum STEP_REGISTER {
   DEFAULT = 1,
   CONFIRM = 2,
-  SUCCESS = 3
+  SUCCESS = 3,
 }
 
 export enum FORM_TYPE {
   REGISTER = "register",
-  PROFILE = "profile"
+  PROFILE = "profile",
 }
 
 export enum STATUS_MATCHING {
   MATCH = "MATCHING",
-  NO_MATCH = "NO MATCHING"
+  NO_MATCH = "NO MATCHING",
 }
 
 export enum TYPE_TARGET_MATCHING {
   INFO_USER = 1,
   INFO_COMMENT = 2,
-  EVALUATION_COMMENT = 3
+  EVALUATION_COMMENT = 3,
 }
 
 export enum INTEREST {
@@ -72,7 +72,7 @@ export enum INTEREST {
   SLEEP = 3,
   APPAREL = 4,
   BEAUTY_RELATED = 5,
-  MONEY = 6
+  MONEY = 6,
 }
 
 export enum BUSINESS {
@@ -81,34 +81,33 @@ export enum BUSINESS {
   HUMAN_RESOURCE_INTERNAL_STRUCTURE = 3,
   SALES_FORCE_SALES_CHANNEL = 4,
   SERVICE_IMPROVEMENT = 5,
-  OFFICE_MANAGEMENT = 6
+  OFFICE_MANAGEMENT = 6,
 }
 
 export enum TYPE_MATCHING_LIST {
   REQUEST = 1,
   APPROVAL_PENDING = 2,
-  MATCHED = 3
+  MATCHED = 3,
 }
 
 export enum TYPE_REGISTER {
   INDIVIDUAL = 1,
   SOLE_PROPRIETORSHIP = 2,
-  CORPORATION = 3
+  CORPORATION = 3,
 }
 
 export enum TYPE_SETTING_ABOUT {
   FREE = 1,
   VIZIEN = 2,
-  VIZIEN_NEO = 3
+  VIZIEN_NEO = 3,
 }
 
-
-export enum HTTP_STATUS  {
-  UPGRADE = 406
+export enum HTTP_STATUS {
+  UPGRADE = 406,
 }
 
 export enum TYPE_LIST_MATCHING {
-  A = 'A',
-  B = 'B',
-  C = 'C'
+  A = "A",
+  B = "B",
+  C = "C",
 }

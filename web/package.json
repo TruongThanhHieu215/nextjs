@@ -1,12 +1,13 @@
 {
   "name": "next-project",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write . --config ./.prettierrc.js"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.4.0",
@@ -19,6 +20,7 @@
     "@types/react-dom": "18.2.4",
     "autoprefixer": "10.4.14",
     "axios": "^1.4.0",
+    "dayjs": "^1.11.10",
     "dotenv": "^16.1.4",
     "eslint": "8.42.0",
     "moment": "^2.29.4",
@@ -41,6 +43,7 @@
     "@types/node": "^20.3.1",
     "@types/react": "^18.2.12",
     "@types/redux-logger": "^3.0.9",
-    "negotiator": "^0.6.3"
+    "negotiator": "^0.6.3",
+    "prettier": "3.0.3"
   }
 }

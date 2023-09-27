@@ -1,4 +1,4 @@
-'use client'
+"use client"
 export default async function Page() {
-  return <div className="bg-black">home</div>;
+  return <div className="bg-black">home</div>
 }

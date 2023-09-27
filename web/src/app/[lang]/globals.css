@@ -53,11 +53,11 @@ body {
   color: #060606;
   overflow-y: auto;
   overflow-x: hidden;
-  background: #F5F5F5;
+  background: #f5f5f5;
 }
 
-input::placeholder{
-  color: #CDD6DD;
+input::placeholder {
+  color: #cdd6dd;
 }
 
 .sniper {
@@ -66,19 +66,19 @@ input::placeholder{
   after:content-[''] after:w-2 after:h-10 after:rounded after:bg-white after:absolute after:top-2/4 after:transform after:-translate-y-1/2 after:left-5 after:box-border after:animate-sniper1;
 }
 
-.checkbox:checked ~ .icon-check{
+.checkbox:checked ~ .icon-check {
   @apply !text-opacity-100;
 }
 
-.checkbox1:checked ~ .icon-check{
+.checkbox1:checked ~ .icon-check {
   @apply !text-opacity-100;
 }
 
-.checkbox:checked{
+.checkbox:checked {
   @apply bg-green1;
 }
 
-.checker-radio:checked::before{
+.checker-radio:checked::before {
   @apply opacity-100;
 }
 
@@ -106,7 +106,7 @@ input::placeholder{
   @apply transform duration-300 opacity-0 !important;
 }
 .below {
-  @apply z-10 opacity-100
+  @apply z-10 opacity-100;
 }
 
 .reset {

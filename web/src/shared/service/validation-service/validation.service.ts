@@ -31,4 +31,4 @@ export const ValidationService = {
   pattern_month: /^[0-9]{1,2}$/,
   pattern_day: /^[0-9]{1,2}$/,
   pattern_minute: /^[0-9]{1,2}$/,
-};
+}

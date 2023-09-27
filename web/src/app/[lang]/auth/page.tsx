@@ -1,12 +1,12 @@
-"use client";
-import { useRouter } from "next-intl/client";
-import React, { useEffect } from "react";
+"use client"
+import { useRouter } from "next-intl/client"
+import React, { useEffect } from "react"
 
 const Auth = () => {
-  const router = useRouter();
+  const router = useRouter()
   useEffect(() => {
     // router.push("auth/login");
-  }, []);
-};
+  }, [])
+}
 
-export default Auth;
+export default Auth
