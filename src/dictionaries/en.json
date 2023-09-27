@@ -1,0 +1,56 @@
+{
+  "VALIDATION": {
+    "FIELD_REQUIRED": "Require",
+    "MAX_LENGTH_100": "最大長100文字",
+    "MAIL_REQUIRED": "Please enter your email address",
+    "MAIL_PATTERN": "Email is not valid",
+    "PASSWORD_REQUIRED": "Please enter your password",
+    "PASSWORD_MIN": "Password must be at least 6 characters",
+    "PASSWORD_MAX": "Password length cannot exceed 40 characters",
+    "PASSWORD_NOT_MATCH": "Password not match"
+  },
+  "AUTHETIONCATION": {
+    "LOGIN": "Login",
+    "FORGOT_PASSWORD": "Forgot password",
+    "REGISTER": "Register",
+    "LOGOUT": "Logout"
+  },
+  "FORM": {
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "PASSWORD_CONFIRM": "Password confirm",
+    "LOGIN": "Login"
+  },
+  "UTILS": {
+    "SUBMIT": "Submit",
+    "CLOSE": "Close",
+    "CANCEL": "Cancel",
+    "UPLOAD": "Upload",
+    "SAVE": "Save",
+    "TITLE_SUCCESS": "Success",
+    "TITLE_ERROR": "Error",
+    "TITLE_CONFIRM": "Confirm",
+    "UPDATE": "Update",
+    "OK": "OK",
+    "BACK": "Back",
+    "RETURN": "Back"
+  },
+  "MESSAGE_ALERT": {
+    "UPDATE_PFT_SCORE_SUCCESS": "I saved it.",
+    "UPDATE_PFT_SPECIALIST_SCORE_SUCCESS": "I saved it.",
+    "SET_NUMBER_EXAM_SUCCESS": "Set No. exam success ",
+    "COMPLETE_COURSE": "I saved it.",
+    "ARE_YOU_SURE_WANNAC_COMPLETE_COURSE": "Are you sure you want to complete the course?",
+    "CREATE_EVENT_SUCCESS": "Create a successful event",
+    "CREATE_COURSE_SUCCESS": "Create a successful course",
+    "CREATE_SEMINAR_SUCCESS": "Create a successful seminar course",
+    "ARE_YOU_WANNA_DELETE_THIS_STAFF": "Do you want to delete this staff?",
+    "CREATE_STAFF_SUCCESS": "I registered the staff",
+    "ARE_YOU_WANNA_DELETE_THIS_NOTICE": "Do you want to delete this notice?",
+    "CREATE_NOTICE_SUCCESS": "Create notice success",
+    "ARE_YOU_WANNA_DELETE_THIS_HOSTAREA": "Do you want to delete?",
+    "CREATE_NOTICE_SUCREATE_HOSTAREA_SUCCESSCCESS": "Create hostarea success",
+    "ARE_YOU_WANNA_DELETE_THIS_LOCATION": "Do you want to delete this location?",
+    "CREATE_LOCATION_SUCCESS": "Create location success"
+  }
+}
