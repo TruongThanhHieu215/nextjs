@@ -1,4 +1,4 @@
 "use client"
-export default async function Page() {
+export default function Page() {
   return <div className="bg-black">home</div>
 }

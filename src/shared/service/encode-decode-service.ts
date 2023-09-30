@@ -1,6 +1,6 @@
 import { Buffer } from "buffer"
-const encodeBase64 = (data: string) => Buffer.from(data).toString("base64")
-const decodeBase64 = (data: string) => Buffer.from(data, "base64").toString()
+export const encodeBase64 = (data: string) => Buffer.from(data).toString("base64")
+export const decodeBase64 = (data: string) => Buffer.from(data, "base64").toString()
 
 const getBaseString = (content: string) => content.slice(0, -8)
 const setBaseInfor = (baseContent: string, baseSecret: string, secretKey: string) => {
@@ -40,15 +40,13 @@ export const encode = (content: string) => {
 
   let numberRandom
   let numberInsert
-  let minPosition
-  let symbolRandom
   let count = 0
 
   numberRandom = 97 + getRandomInt(25)
   numberInsert = 65 + getRandomInt(25)
-  symbolRandom = String.fromCharCode(numberRandom) + String.fromCharCode(numberInsert)
+  const symbolRandom = String.fromCharCode(numberRandom) + String.fromCharCode(numberInsert)
   numberRandom = 1 + getRandomInt(9)
-  minPosition = Math.min(lengthContent, 20)
+  const minPosition = Math.min(lengthContent, 20)
   numberInsert = Math.floor(getRandomInt(minPosition) / 2)
   while (indexContent < lengthContent) {
     character = content.charCodeAt(indexContent)

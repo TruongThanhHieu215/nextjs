@@ -1,20 +1,19 @@
-import React, { useState } from "react"
+import { useState } from "react"
 
-const useLocalstorage = (key: string, innitalState: any) => {
-  const [localstoregeValue, setLocalstorageValue] = useState(() => {
+export const useLocalStorage = <T>(key: string, initialState: T) => {
+  const [localStorageValue, setLocalStorageValue] = useState(() => {
     try {
-      const item = localStorage.getItem(key)
-      return item ? JSON.parse(item) : innitalState
+      const item = localStorage.getItem(key) ?? ""
+      return isValidJSON(item) ? (JSON.parse(item) as T) : initialState
     } catch (error) {
-      return innitalState
+      return initialState
     }
   })
 
-  const setValue = (value: any) => {
+  const setValue = (value: T) => {
     try {
-      const valueStore = value instanceof Function ? value(localstoregeValue) : value
-      setLocalstorageValue(valueStore)
-      window.localStorage.setItem(key, JSON.stringify(valueStore))
+      setLocalStorageValue(value)
+      window.localStorage.setItem(key, JSON.stringify(value))
     } catch (error) {
       // console.log(error);
     }
@@ -22,14 +21,21 @@ const useLocalstorage = (key: string, innitalState: any) => {
 
   const removeValue = () => {
     try {
-      setLocalstorageValue(innitalState)
+      setLocalStorageValue(initialState)
       window.localStorage.removeItem(key)
     } catch (error) {
       // console.log(error);
     }
   }
 
-  return [localstoregeValue, setValue, removeValue]
+  return [localStorageValue, setValue, removeValue]
 }
 
-export default useLocalstorage
+export const isValidJSON = (obj: string) => {
+  try {
+    JSON.parse(obj)
+    return true
+  } catch (e) {
+    return false
+  }
+}

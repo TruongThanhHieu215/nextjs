@@ -1,12 +1,12 @@
 "use client"
 import { useRouter } from "next-intl/client"
-import React, { useEffect } from "react"
+import { useEffect } from "react"
 
-const Auth = () => {
+export default function Auth() {
   const router = useRouter()
   useEffect(() => {
-    // router.push("auth/login");
-  }, [])
-}
+    router.push("auth/login")
+  }, [router])
 
-export default Auth
+  return <></>
+}

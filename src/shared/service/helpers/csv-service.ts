@@ -1,27 +1,17 @@
-// header = ['a', 'b', 'v', 'd'];
-// data = [
-//   {
-//     p1: '',
-//     p2: '',
-//     p3: '
-//   },
-//   {
-//     p1: '',
-//     p2: '',
-//     p3: '
-//   }
-// ]
-// fields = [p1,p2,p3]
-export const exportToCsv = (datas: any, headers: any, fields: any, filename: any) => {
-  var processRow = function (row: any) {
-    var finalVal = ""
+type DataItem = {
+  [key: string]: string | Date
+}
 
-    for (var j = 0; j < fields.length; j++) {
-      var innerValue = row[fields[j]] === null ? "" : row[fields[j]].toString()
+export const exportToCsv = (dataList: DataItem[], headers: string[], fields: string[], filename: string) => {
+  const processRow = (row: DataItem) => {
+    let finalVal = ""
+
+    for (let j = 0; j < fields.length; j++) {
+      let innerValue = row[fields[j]] === null ? "" : row[fields[j]].toString()
       if (row[fields[j]] instanceof Date) {
         innerValue = row[fields[j]].toLocaleString()
       }
-      var result = innerValue.replace(/"/g, '""')
+      let result = innerValue.replace(/"/g, '""')
       if (result.search(/("|,|\n)/g) >= 0) {
         result = '"' + result + '"'
       }
@@ -34,19 +24,19 @@ export const exportToCsv = (datas: any, headers: any, fields: any, filename: any
     return finalVal + "\n"
   }
 
-  var csvFile = headers.toString() + "\n"
-  for (var i = 0; i < datas.length; i++) {
-    // console.log(datas[i]);
-    csvFile += processRow(datas[i])
+  let csvFile = headers.join(",") + "\n"
+
+  for (let i = 0; i < dataList.length; i++) {
+    csvFile += processRow(dataList[i])
   }
 
-  var blob = new Blob(["\uFEFF" + csvFile], { type: "text/csv;charset=utf-8;" })
+  const blob = new Blob(["\uFEFF" + csvFile], { type: "text/csv;charset=utf-8;" })
 
-  var link = document.createElement("a")
+  const link = document.createElement("a")
   if (link.download !== undefined) {
     // feature detection
     // Browsers that support HTML5 download attribute
-    var url = URL.createObjectURL(blob)
+    const url = URL.createObjectURL(blob)
     link.setAttribute("href", url)
     link.setAttribute("download", filename + ".csv")
     link.style.visibility = "hidden"

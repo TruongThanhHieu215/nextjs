@@ -1,5 +1,3 @@
-import { useState } from "react"
-
 interface CookieOptions {
   expires?: Date
   path?: string
@@ -21,7 +19,7 @@ const useCookies = <T>(key: string, initialValue: T | null = null) => {
     const nameCookies = key + "="
     const cookiesList = getCookiesList()
 
-    const foundCookie = cookiesList.find((cookie) => cookie.indexOf(nameCookies) === 0)
+    const foundCookie = cookiesList.find((cookie) => cookie.indexOf(nameCookies) === 0) ?? ""
     if (foundCookie) {
       const value = foundCookie.substring(nameCookies.length)
       return JSON.parse(decodeURIComponent(value)) as T

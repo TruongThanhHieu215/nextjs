@@ -1,11 +1,12 @@
 "use client"
 import { useRouter } from "next-intl/client"
-import React, { useEffect } from "react"
+import { useEffect } from "react"
 
-export default async function User() {
+export default function User() {
   const router = useRouter()
   useEffect(() => {
     router.push("user/target-matching")
-  }, [])
-  return
+  }, [router])
+
+  return <></>
 }

@@ -3,13 +3,13 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit"
 export interface IUserState {
   currentUser: null
   isLoading: boolean
-  error: any
+  error: string
 }
 
 const INITIAL_STATE: IUserState = {
   currentUser: null,
   isLoading: false,
-  error: null,
+  error: "",
 }
 
 export const userSlice = createSlice({
