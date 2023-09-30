@@ -1,8 +1,8 @@
-import { AxiosHeaders } from "axios"
+import { AxiosHeaders, AxiosResponse } from "axios"
 import http from "./http-common.component"
 import useCookies from "shared/custom-hook/cookies/cookies"
 
-export function getHeaders(headersPairs?: any): AxiosHeaders {
+const getHeaders = (headersPairs?: Record<string, string>[]): AxiosHeaders => {
   const [token] = useCookies<string>("token")
   const objHeader = new AxiosHeaders()
   if (token) {
@@ -10,64 +10,63 @@ export function getHeaders(headersPairs?: any): AxiosHeaders {
   }
   objHeader.set("locale", "ja")
   objHeader.set("content-type", "application/json")
-  if (typeof headersPairs === "object") {
-    if (Array.isArray(headersPairs)) {
-      headersPairs.forEach((element: any) => {
-        objHeader.set(element.key, element.value)
-      })
-    }
+  if (headersPairs && headersPairs.length > 0) {
+    headersPairs.forEach((element) => {
+      objHeader.set(element.key, element.value)
+    })
   }
 
   return objHeader
 }
 
-export const getAll = (path: string, headersPairs?: any): Promise<any> => {
+const getAll = <T>(path: string, headersPairs?: Record<string, string>[]): Promise<AxiosResponse<T>> => {
   const options = {
     headers: getHeaders(headersPairs),
   }
-  return http.get<Array<any>>(path, options)
+  return http.get<T>(path, options)
 }
 
-const get = (path: string, id: string, headersPairs?: any): Promise<any> => {
+const get = <T>(path: string, id: string, headersPairs?: Record<string, string>[]): Promise<AxiosResponse<T>> => {
   const options = {
     headers: getHeaders(headersPairs),
   }
-  return http.get<any>(`${path}${id}`, options)
+  return http.get<T>(`${path}${id}`, options)
 }
 
-const post = (path: string, data?: any, headersPairs?: any): Promise<any> => {
+const post = <T>(path: string, data?: T, headersPairs?: Record<string, string>[]): Promise<AxiosResponse> => {
   const options = {
     headers: getHeaders(headersPairs),
   }
-  return http.post<any>(path, data, options)
+  return http.post(path, data, options)
 }
 
-const put = (path: string, data: any, id?: string, headersPairs?: any): Promise<any> => {
+const put = <T>(
+  path: string,
+  data: T,
+  id?: string,
+  headersPairs?: Record<string, string>[]
+): Promise<AxiosResponse> => {
   const options = {
     headers: getHeaders(headersPairs),
   }
-  return http.put<any>(`${path}${id ? id : ""}`, data, options)
+  return http.put(`${path}${id ? id : ""}`, data, options)
 }
 
-const remove = (path: string, id: string, headersPairs?: any): Promise<any> => {
+const remove = (path: string, id: string, headersPairs?: Record<string, string>[]): Promise<AxiosResponse> => {
   const options = {
     headers: getHeaders(headersPairs),
   }
-  return http.delete<any>(`${path}${id}`, options)
+  return http.delete(`${path}${id}`, options)
 }
 
-const removeAll = (path: string, headersPairs?: any): Promise<any> => {
+const removeAll = (path: string, headersPairs?: Record<string, string>[]): Promise<AxiosResponse> => {
   const options = {
     headers: getHeaders(headersPairs),
   }
-  return http.delete<any>(path, options)
+  return http.delete(path, options)
 }
 
-// const findByTitle = (title: string) : Promise<any>=> {
-//   return http.get<Array<ITutorialData>>(`/tutorials?title=${title}`);
-// };
-
-const CallApi = {
+export const ApiService = {
   getAll,
   get,
   post,
@@ -75,5 +74,3 @@ const CallApi = {
   remove,
   removeAll,
 }
-
-export default CallApi

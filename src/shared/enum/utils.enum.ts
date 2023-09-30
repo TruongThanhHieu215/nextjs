@@ -8,18 +8,7 @@ export enum Utils {
   NOTICE_FROM_PAGE = "ページからの通知",
 }
 
-export enum VALIDATION {
-  MIN_PASS = 6,
-  MAX_PASS = 40,
-  MAX_CARD = 19,
-  MAX_CVV = 4,
-  MIN_CVV = 3,
-  MAX_YEAR = 2,
-  MAX_MONTH = 2,
-  NUMBER_SPACE = 4,
-}
-
-export enum WINDOWN_SIZE {
+export enum WINDOW_SIZE {
   LANDSCAPE = 1024,
   PHONE = 768,
 }
@@ -27,9 +16,9 @@ export enum WINDOWN_SIZE {
 export enum TYPE_BUTTON {
   DEFAULT = 1,
   PRIMARY = 2,
-  SECCOND = 3,
+  SECOND = 3,
   CHECKBOX = 4,
-  THIRT = 5,
+  THIRD = 5,
   YELLOW = 6,
 }
 

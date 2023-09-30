@@ -1,9 +1,8 @@
 "use client"
-import { Suspense, useEffect } from "react"
+import { Suspense } from "react"
 import "../globals.css"
-import { UserLayoutComponent } from "@/layout/user-layout/user-layout.component"
 
-export default async function UserLayout({ children }: { children: React.ReactNode }) {
+export default function UserLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Suspense fallback={<p>Loading ...</p>}>
