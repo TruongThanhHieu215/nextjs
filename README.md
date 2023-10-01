@@ -58,7 +58,7 @@ Please follow these Git conventions:
 
 - Make sure that you always work on a separate branch
 - Branch name must have this format `__type__/__ticket__-your-title`, for example: `feature/1234-feature-name`
-- Commit messages must have this format: `#__ticket__: Your description`, for example:  `#1234: Commit message` to
+- Commit messages must have this format: `#__ticket__: Your description`, for example: `#1234: Commit message` to
   utilize Jira work item link feature
 - You can use any of these types: `feature`, `hotfix`, `release`, `support` for branch names
 - Pull request title must have this format: `__ticket__: Your title`, for example `1234: Feature name`

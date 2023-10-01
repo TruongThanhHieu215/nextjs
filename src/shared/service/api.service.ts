@@ -1,6 +1,6 @@
 import { AxiosHeaders, AxiosResponse } from "axios"
-import http from "./http-common.component"
-import useCookies from "shared/custom-hook/cookies/cookies"
+import http from "./http-common"
+import useCookies from "@/hooks/useCookies"
 
 const getHeaders = (headersPairs?: Record<string, string>[]): AxiosHeaders => {
   const [token] = useCookies<string>("token")

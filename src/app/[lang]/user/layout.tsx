@@ -2,7 +2,7 @@
 import { Suspense } from "react"
 import "../globals.css"
 
-export default function UserLayout({ children }: { children: React.ReactNode }) {
+const UserLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Suspense fallback={<p>Loading ...</p>}>
@@ -11,3 +11,5 @@ export default function UserLayout({ children }: { children: React.ReactNode }) 
     </>
   )
 }
+
+export default UserLayout

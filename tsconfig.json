@@ -23,11 +23,10 @@
     "paths": {
       "@/*": ["/*"],
       "@/components/*": ["shared/components/*"],
-      "@/models/*": ["shared/models/*"],
+      "@/types/*": ["shared/types/*"],
       "@/layout/*": ["shared/layout/*"],
       "@/constants/*": ["shared/constants/*"],
       "@/service/*": ["shared/service/*"],
-      "@/core/*": ["shared/core/*"],
       "@/hooks/*": ["shared/hooks/*"]
     }
   },
