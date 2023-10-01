@@ -1,4 +1,6 @@
 "use client"
-export default function Page() {
+const Page = () => {
   return <div className="bg-black">home</div>
 }
+
+export default Page

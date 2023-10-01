@@ -26,7 +26,7 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react", "react-hooks", "@typescript-eslint", "eslint-plugin-prettier", "prettier", "unused-imports"],
+  plugins: ["react", "react-hooks", "@typescript-eslint", "eslint-plugin-prettier", "prettier"],
   rules: {
     "@typescript-eslint/consistent-type-definitions": "off",
     "@typescript-eslint/no-misused-promises": [
@@ -41,10 +41,10 @@ module.exports = {
         endOfLine: "auto",
       },
     ],
-    "unused-imports/no-unused-imports": "error",
     "react-hooks/rules-of-hooks": "warn",
     "react-hooks/exhaustive-deps": "warn",
     "react/react-in-jsx-scope": "off",
     "no-irregular-whitespace": "off",
+    "@typescript-eslint/no-unused-vars": "off",
   },
 }

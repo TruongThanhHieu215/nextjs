@@ -2,7 +2,7 @@
 import { useRouter } from "next-intl/client"
 import { useEffect } from "react"
 
-export default function User() {
+const User = () => {
   const router = useRouter()
   useEffect(() => {
     router.push("user/target-matching")
@@ -10,3 +10,5 @@ export default function User() {
 
   return <></>
 }
+
+export default User

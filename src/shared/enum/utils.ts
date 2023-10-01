@@ -5,7 +5,6 @@ export enum Utils {
   OK = "UTILS.OK",
   CLOSE = "UTILS.CLOSE",
   SAVE = "UTILS.SAVE",
-  NOTICE_FROM_PAGE = "ページからの通知",
 }
 
 export enum WINDOW_SIZE {
@@ -93,10 +92,4 @@ export enum TYPE_SETTING_ABOUT {
 
 export enum HTTP_STATUS {
   UPGRADE = 406,
-}
-
-export enum TYPE_LIST_MATCHING {
-  A = "A",
-  B = "B",
-  C = "C",
 }

@@ -3,5 +3,4 @@ export enum CrudType {
   SAVE = 2,
   CONFIRM = 3,
   SUCCESS = 4,
-  TYPE_1 = 5,
 }
